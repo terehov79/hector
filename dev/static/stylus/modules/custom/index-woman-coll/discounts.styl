@@ -1,0 +1,65 @@
+.discounts
+  width 100%
+  padding 65px 100px 0
+  .discounts--wrap
+    width 100%
+h2.zag
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 78px;
+  letter-spacing: 0.07em;
+  color: #0F0F0F;
+  padding 0 0 60px 50px;
+  position relative
+  &::before
+    content ""
+    position absolute
+    width: 3px;
+    height: 53px;
+    top: 12px
+    left 0
+    background: #0F0F0F;
+
+.block
+  width 100%
+  &__photo
+    width: 100%;
+    height: auto
+    background: #ECECEC;
+    margin-bottom: 15px;
+    &__image
+      size(100%)
+    &__img
+      size(100%)
+  p.text_18
+    line-height: 22px;
+    color: #0F0F0F;
+    margin-right: 50px;
+    padding 16px 0;
+  &__price
+    span.sale-price
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 37px;
+      letter-spacing: 0.07em;
+      color: #D00000;
+      position relative
+      &::after
+        content attr(data-full-price)
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0.07em;
+        color: rgba(15, 15, 15, 0.75);
+        position: absolute;
+        top 0
+        left 95px
+      &::before
+        content""
+        position absolute
+        width: 57.3px;
+        height: 1px;
+        top   10px
+        left 90px
+        background: rgba(15, 15, 15, 0.75);
+        transform: rotate(-17.41deg);

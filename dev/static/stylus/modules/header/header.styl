@@ -1,0 +1,207 @@
+.header
+  width 100%
+  display flex
+  justify-content: space-between;
+  align-items: flex-start;
+  position relative
+  &__main
+    display flex
+    justify-content flex-start
+    align-items: flex-start;
+  &--wrap
+    width 100%
+    background-color transparent
+    position absolute
+    top 0
+    left 0
+    z-index 777
+  &__info
+    display flex
+    justify-content: center;
+    align-items: center;
+  &__lang
+    width: 125px;
+    height: 110px;
+    display flex
+    justify-content: center;
+    align-items: center;
+    &:hover
+      background-color baseBlack
+    &:hover .header__change
+      visibility visible
+      opacity: 1;
+    a.text_18
+      font-weight: 500;
+      line-height: 22px;
+      letter-spacing: 0.07em;
+      color baseWhite
+      svg
+        size(20px)
+        fill baseWhite
+        margin-left: 15px;
+  &__change
+    visibility hidden
+    opacity 0
+    position absolute
+    top 111px
+    right 220px
+    width: 200px;
+    height: auto
+    border 1px solid #E7E7E7
+    display: flex;
+    flex-direction column
+    justify-content: space-around;
+    align-items: flex-start;
+    box-shadow: 0px 102px 124px rgba(0, 0, 0, 0.25);
+    a.text_20
+      width 100%
+      padding 15px 25px;
+      margin 0
+      display block
+      color #6C6C6C
+      background-color baseWhite
+      &:hover
+        color #6C6C6C
+        background-color #E7E7E7
+    a.text_20:not(:last-child)
+      border-bottom 1px solid #E7E7E7
+
+  &__icons
+    width 100%
+    height: auto;
+    display flex
+    justify-content: center;
+    align-items: center;
+    a
+      display flex
+      justify-content: center;
+      align-items: center;
+      width: 59px;
+      height: 110px;
+      &:hover
+        background-color baseBlack
+      &:hover .header__phone
+        visibility visible
+        opacity: 1;
+    svg
+      size(30px)
+      fill baseWhite
+
+  &__phone
+    visibility hidden
+    opacity 0
+    position absolute
+    top 111px
+    right 30px
+    width: 279px;
+    height: 219px;
+    border 1px solid #E7E7E7
+    display: flex;
+    flex-direction column
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color baseWhite
+    box-shadow: 0px 102px 124px rgba(0, 0, 0, 0.25);
+
+    a.text_20
+      width: 100%;
+      color #6C6C6C;
+      padding 15px 25px;
+      border-bottom 1px solid #E7E7E7
+      &:hover
+        background-color #E7E7E7
+
+    .calendar
+      display flex
+      justify-content: flex-start;
+      align-items: center;
+      width 100%
+      padding 15px 25px;
+      color #6C6C6C;
+      svg
+        size(17px)
+        margin-right 10px
+        fill #6C6C6C
+
+  &__phone-active
+    &:hover .header__phone
+      visibility visible
+      opacity: 1;
+
+.logotype
+  width: 147.04px;
+  height: 126px;
+  margin 20px 0 20px 20px
+  display inline-block
+  svg
+    size(100%)
+    fill baseWhite
+
+.tab--active
+  background-color grey!important
+  color white!important
+
+
+header.header--wrap.header-alt
+  width 100%
+  position static
+  top initial
+  left initial
+
+.header-alt
+  background-color baseBlack
+  .header
+    width 100%
+    display flex
+    justify-content: flex-start;
+    align-items: center;
+
+    &__main
+      width 60%
+      align-items: center;
+    &__logo
+      padding 20px 0
+    &__menu
+      width 100%
+      .nav
+        padding 0
+        &__item
+          padding 0 15px
+        &__link
+          font-weight: bold;
+          line-height: 22px;
+          color: #FFFFFF;
+    &__search
+      width 20%
+      display flex
+      justify-content: center;
+      align-items: center;
+      position relative
+    &__form-search
+      width 100%
+      border-bottom 1px solid rgba(255, 255, 255, 0.5);
+      input.text_18
+        padding 10px 20px
+        width 100%
+        border none
+        background-color baseBlack
+        font-weight: bold;
+        line-height: 22px;
+        letter-spacing: 0.07em;
+        color: #FFFFFF;
+        &::placeholder
+          color baseWhite
+    &__icon-search
+      position absolute
+      top 10px
+      right 20px
+      svg
+        size(15px)
+        fill baseWhite
+    &__icons
+      width 20%
+    &__phone-active
+      padding-right 30px
+    &__phone
+      top 130px
+      right 30px

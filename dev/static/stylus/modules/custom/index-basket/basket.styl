@@ -1,0 +1,152 @@
+.basket
+  width 100%
+  padding 0 100px 50px
+  &--wrap
+    width 100%
+  &__zag
+    width 100%
+    display: flex;
+    flex-direction column
+    justify-content center
+    align-items center
+  &__discont
+    width 100%
+    display: flex;
+    justify-content center
+    align-items center
+    padding-bottom: 100px;
+    p.text_24
+      line-height: 29px;
+      letter-spacing: 0.07em;
+      color: #000000;
+    p.text_24.reds
+      color red
+      font-weight: bold;
+      padding 0 10px
+  &__main
+    width 100%
+    ul.basket__card
+      width 100%
+      li.basket__head
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 20px;
+        border-bottom 1px solid #B2B2B2
+        span.text_18
+          font-weight: bold;
+          line-height: 22px;
+          letter-spacing: 0.07em;
+          color: #B2B2B2;
+      li.basket__item
+        width 100%
+        padding 20px 0
+        display: flex;
+        justify-content: flex-start;
+        border-bottom 1px solid #B2B2B2
+      li.basket__foot
+        width 100%
+        padding 30px 0
+        display: flex;
+        justify-content: flex-start;
+        border-bottom 1px solid #B2B2B2
+  &__photo
+    width 12%
+  &__description
+    width 28%
+    display: flex;
+    flex-direction column
+    justify-content: space-between;
+    align-items flex-start
+  &__size
+    display flex
+    p.text_16.bold
+      padding-left 10px
+  &__color
+    display: flex;
+  &__quantity
+    width 12%
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  &__price, &__sale, &__summ, &__delete
+    width 12%
+    font-weight: bold;
+    line-height: 29px;
+    letter-spacing: 0.07em;
+    color: #0F0F0F;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  &__delete
+    svg
+      size(20px)
+      fill #B2B2B2
+      margin-right 15px
+  &__promocod
+    p.text_24
+      padding-bottom: 10px;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 29px;
+      letter-spacing: 0.07em;
+      color: #B2B2B2;
+  &__input
+    width 70%
+  &__input-promo
+      position relative
+    input.text_18
+      padding 10px 0
+      font-weight: bold;
+      line-height: 22px;
+      letter-spacing: 0.07em;
+      color: #0F0F0F;
+      border-top none
+      border-left none
+      border-right none
+      border-bottom 3px solid #0F0F0F
+      &::placeholder
+        color #0F0F0F
+  &__input-icon
+    position absolute
+    bottom 26%
+    left 68%
+    svg
+      size(15px)
+      fill #0F0F0F;
+      transform: rotate(-90deg)
+  &__promocod
+    width 33%
+  &__topay
+    width 33%
+    display flex
+    flex-direction column
+    justify-content: center;
+    align-items: center;
+  &__econom, &__pay
+    display flex
+    p.text_18, p.text_36
+      padding-right: 20px;
+    p.text_18
+      line-height: 22px;
+      letter-spacing: 0.07em;
+      color: #0F0F0F;
+    span.text_24
+      line-height: 29px;
+      letter-spacing: 0.07em;
+      color: #D00000;
+    p.text_36, span.text_36
+      font-weight: bold;
+      line-height: 44px;
+      letter-spacing: 0.07em;
+      color: #0F0F0F;
+  &__delete-basket
+    width 33%
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    svg
+      size(20px)
+      fill #B2B2B2
+      margin-right 15px

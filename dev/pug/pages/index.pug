@@ -1,0 +1,22 @@
+extends ../layout/main
+
+block variables
+  - var title = 'HECTOR - Homepage'
+  - var pageClass = 'index-page'
+
+block content
+  - var welcomeInfo = ['МУЖСКАЯ', 'ЖЕНСКАЯ', 'КОЛЛЕКЦИЯ','Распродажа коллекций со скидками до 50%, доставка до вашего склада']
+
+  include ../modules/header
+  .content
+    include ../custom/index-home/welcome
+    include ../custom/index-home/promotion
+    include ../custom/index-home/best
+    include ../custom/index-home/news
+    include ../custom/index-home/reviews
+    include ../custom/index-home/info
+    include ../custom/index-home/subscribe
+  include ../modules/footer
+
+
+block script

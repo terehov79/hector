@@ -1,0 +1,17 @@
+.discounts--wrap
+  .container
+    .discounts
+      h2.zag
+        | СКИДКИ
+      .row
+        -for (var i = 0; i < 4; i++)
+          .col-lg-3.col-md-12
+            .block
+              ._photo
+                +img('content/woman03', 'png', 'block__photo')
+              +stars(3)
+              p.text_18
+                | Футболка мужская Exclusive 22032 Liking and Exeepting
+              ._price
+                span(data-full-price="345₴").sale-price
+                  | 245₴

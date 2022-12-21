@@ -1,0 +1,17 @@
+extends ../layout/main
+
+block variables
+  - var title = 'Главная страница'
+  - var pageClass = 'index-page'
+
+block content
+  - var welcomeInfo = ['МУЖСКАЯ', 'ЖЕНСКАЯ', 'КОЛЛЕКЦИЯ','Распродажа коллекций со скидками до 50%, доставка до вашего склада']
+
+  include ../modules/header-alt
+  .content
+    include ../custom/index-basket/basket
+    include ../custom/index-basket/ordering
+  include ../modules/footer
+
+
+block script

@@ -1,0 +1,266 @@
+.select-color
+  width 100%
+  margin-bottom 120px
+  display flex
+  flex-direction column
+  position: relative;
+  span.text_20
+    font-weight: bold;
+    line-height: 24px;
+    letter-spacing: 0.07em;
+    color: #0F0F0F;
+    padding: 40px 0 10px;
+  &__main
+    width 100%
+    display flex
+    justify-content space-between
+    align-items: center;
+    border-bottom 3px solid black
+    position relative
+    a.text_18
+      font-weight: bold;
+      line-height: 22px;
+      letter-spacing: 0.07em;
+      color: #0F0F0F;
+      display: flex
+      justify-content: flex-start;
+      align-items: center;
+      padding 0 0 10px
+    svg
+      size(23px)
+      margin-bottom 10px
+      transition transition
+  .select-active
+    svg
+      transform rotate(-180deg)
+  ul.sel
+    width 100%
+    display none
+    top 100%
+    left 0
+    z-index: 5;
+    position absolute
+    border-bottom 3px solid gray
+    padding-bottom 10px
+    background-color #FAFAFA
+    li.sel__item
+      padding-top 10px
+      display flex
+      justify-content: flex-start;
+      align-items center
+      a.text_18
+        font-weight: bold;
+        line-height: 22px;
+        letter-spacing: 0.07em;
+        color: #0F0F0F;
+        display: flex
+        justify-content: flex-start;
+        align-items: center;
+      a.sel-active
+        color lightgrey
+        pointer-events none
+
+.black
+  display block
+  size(23px)
+  background-color black
+  border-radius 50%
+  margin-right 10px
+.gray
+  display block
+  size(23px)
+  background-color gray
+  border-radius 50%
+  margin-right 10px
+.red
+  display block
+  size(23px)
+  background-color red
+  border-radius 50%
+  margin-right 10px
+.khaki
+  display block
+  size(20px)
+  background-color #968F72
+  border-radius 50%
+  margin 0 5px
+
+.man-complects_btn
+  width 100%
+  display flex
+  justify-content: center;
+  align-items: center;
+  padding: 35px 0 60px;
+
+.man-complects_zag
+  display flex
+  justify-content: center;
+  align-items: center;
+
+.man-complects_sel
+  width: 100%;
+  padding 0 100px 10px
+  .select-gl.sort
+    width 25%
+
+.man-complects
+  width 100%
+  padding 0 100px
+  position relative
+  &--wrap
+    width 100%
+    &__box:not(:first-child)
+      display none
+  &--wrap:nth-child(even)
+    .row
+      flex-direction row-reverse
+      .content__photo
+        padding 0 0 0 175px
+        &__info
+          top 28%
+          left 0
+  &__content
+    width 100%
+    margin-top 100px
+  &__fon
+    width 90%
+    height 95%
+    background-color #FAFAFA
+    position absolute
+    top 5%
+    left 5%
+    z-index -1
+
+  .content__photo
+    width 100%
+    padding-right 175px
+    position relative
+    &__image
+      width 100%
+      display block
+      border 1px solid black
+    &__img
+      width 100%
+    &__info
+      width 50%
+      padding 25px
+      background-color white
+      position absolute
+      top 28%
+      left 50%
+      span.text_24
+        font-weight: bold;
+        line-height: 29px;
+        letter-spacing: 0.07em;
+        color: #0F0F0F;
+        display inline-block
+        padding-bottom: 20px;
+      p.text_14
+        font-weight: 300;
+        line-height: 130%;
+        letter-spacing: 0.07em;
+        color: #0F0F0F;
+
+  .content__main
+      width 100%
+      padding 0 25px
+
+  .content__block
+    width 100%
+    p.text_12
+      line-height: 15px;
+      color: #0F0F0F;
+      padding 15px 0
+    span.text_18
+      font-weight: bold;
+      line-height: 22px;
+      letter-spacing: 0.07em;
+      color: #0F0F0F;
+    &__image
+      width 100%
+      display block
+    &__img
+      width 100%
+
+  .content__size-chart
+    width 100%
+    padding 100px 25px 0
+    .chart
+      width 100%
+      display flex
+      justify-content: flex-start;
+      align-items: center;
+      svg
+        size(30px)
+        fill rgba(15, 15, 15, 0.5)
+      a.text_18
+        margin-left 20px
+        font-weight: bold;
+        line-height: 25px;
+        letter-spacing: 0.25em;
+        color: rgba(15, 15, 15, 0.5);
+        border-bottom 3px dashed gray
+
+  .content__price
+    width 100%
+    padding 50px 25px 0
+    display: flex;
+    justify-content space-between
+    align-items: flex-end;
+    .sell-price
+      width: 100%;
+      p.text_18
+        font-weight: bold;
+        line-height: 22px;
+        letter-spacing: 0.07em;
+        color: #0F0F0F;
+        padding-bottom 15px
+      span.text_48.sale-price
+        font-weight: 600;
+        line-height: 59px;
+        letter-spacing: 0.07em;
+        color: #D00000;
+        position relative
+        &::after
+          content attr(data-full-price)
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 22px;
+          letter-spacing: 0.07em;
+          color: rgba(15, 15, 15, 0.75);
+          position: absolute;
+          top 50%
+          right -100px
+        &::before
+          content""
+          position absolute
+          width: 57.3px;
+          height: 1px;
+          top 68%
+          right -90px
+          background: rgba(15, 15, 15, 0.75);
+          transform: rotate(-17.41deg);
+    .basket
+      width: 100%;
+      height: 100px;
+      display: flex;
+      justify-content: flex-end;
+      align-items flex-end
+      padding-right: 0;
+      position relative
+      svg
+        size(25px)
+        fill baseWhite
+        position absolute
+        top 50%
+        left 12%
+      .basket_btn
+        padding-left 50px
+
+.pagination
+  width 100%
+  padding 100px 100px 50px
+  .count
+    width 100%
+    display flex
+    justify-content: center;

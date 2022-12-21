@@ -1,0 +1,31 @@
+.subscribe--wrap
+  .container
+    .subscribe
+      .row
+        .col-lg-6.col-md-12
+          .form
+            p.text_30
+              | Подпишись и следи за новыми поступлениями и акциями
+            form
+              .phone
+                +icon('phone')
+                input.text_24(type='tel' placeholder='+38 (___) ___-___-__')
+              +btn_global('button', 'ПОДПИСАТЬСЯ', 'subscribe_btn')
+        .col-lg-6.col-md-12
+          .social
+            p.text_30
+              | Или подписаться на наши группы и быть в курсе последних акций
+            ._icons
+              a(href="#")
+                +icon('viber')
+              a(href="#")
+                +icon('telegram')
+              a(href="#")
+                +icon('whatsup')
+              span
+              a(href="#")
+                +icon('youtube')
+              a(href="#")
+                +icon('facebook')
+              a(href="#")
+                +icon('instagram')

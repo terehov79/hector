@@ -1,0 +1,309 @@
+mixin icon(names, mod)
+  - mod = mod || ''
+  svg(class="icon icon-" + names + ' ' + mod)
+    use(xlink:href="static/img/svg-sprites/symbol/sprite.svg#" + names)
+
+mixin logotype(img)
+  a(href="index.html").logotype
+    img(src="static/img/" + img alt="logo")._img
+
+mixin link_global(href, text, addClass)
+  a(href= href class= addClass).btn_global= text
+
+mixin btn_global(names, text, addClass)
+  button(type="button" name= names class= addClass)= text
+
+mixin img(link, format, parent)
+  div(class="" + parent + "__image")
+    //source(srcset='static/img/' + link + '.webp', type='image/webp' class="" + parent + "__img")
+    img(src='static/img/' + link + '.' + format, alt='img' class="" + parent + "__img")
+
+mixin img-media(link, linkMob, format, parent)
+  picture(class="" + parent + "__image")
+    source(srcset='static/img/' + linkMob + '.webp', media='(max-width: 768px)' type='image/webp' class="" + parent + "__img")
+    source(srcset='static/img/' + linkMob + '.' + format, media='(max-width: 768px)' type='image/png' class="" + parent + "__img")
+    source(srcset='static/img/' + link + '.webp', type='image/webp' class="" + parent + "__img")
+    img(src='static/img/' + link + '.' + format, alt='img' class="" + parent + "__img")
+
+mixin btn_slider
+  button(type="button" name="prev").btn_slider.btn_prev
+    +icon('right')
+  button(type="button" name="next").btn_slider.btn_next
+    +icon('right')
+
+mixin menuGlobal-script
+  script.
+    // Nav pages global
+    $('.menu_click').on('click', function () {
+      $('.menu_wrap').toggleClass('menu_wrap_active');
+    });
+
+mixin social
+  ul.social
+    li._item
+      a(href="#")._link
+        +icon('icon-vk')
+    li._item
+      a(href="#")._link
+        +icon('icon-facebook')
+    li._item
+      a(href="#")._link
+        +icon('icon-telegram')
+    li._item
+      a(href="#")._link
+        +icon('icon-od')
+    li._item
+      a(href="#")._link
+        +icon('icon-twitter')
+    li._item
+      a(href="#")._link
+        +icon('icon-instagram')
+
+mixin breadcrumbs(text)
+  ul.breadcrumbs
+    li._item
+      span._home.text_14
+        | Главная
+    li._item
+      a(href="#")._link.text_14= text
+
+mixin burger
+  button(type="button" name="menu").menu
+    svg(viewBox='0 0 64 48')
+      path(d='M19,15 L45,15 C70,15 58,-2 49.0177126,7 L19,37')
+      path(d='M19,24 L45,24 C61.2371586,24 57,49 41,33 L32,24')
+      path(d='M45,33 L19,33 C-8,33 6,-2 22,14 L45,37')
+  script.
+    // TODO Burger
+    $('button.menu').on('click', function (event) {
+      event.preventDefault();
+      $(this).toggleClass('active');
+      // $('.header__menu').toggleClass('menu--active');
+      // $('body').toggleClass('overflow');
+    });
+    $('.wrapper').on('click', function () {
+      $('button.menu').removeClass('active');
+      // $('.header__menu').removeClass('menu--active');
+      // $('body').removeClass('overflow');
+    });
+    // TODO Wrapper click burger disabled
+    $('button.menu, .header__menu').on('click', function (event) {
+      event.stopPropagation();
+    });
+
+mixin counter
+  .counter
+    button(type="button" name="minus")._btn.counter__minus.counter__disabled.text_18
+      span -
+    input(type="number" name="counter" value="1" maxlength="5" min="1" max="99999" autocomplete="off")._input.text_14
+    button(type="button" name="plus")._btn.counter__plus.text_18
+      span +
+
+
+mixin copyright
+  p.copyright(data-lang="Все права защищены.")
+  script.
+    // TODO Copyright auto update
+    function copyrightUpdate(el) {
+      let d = new Date(), copyright = $(el);
+      copyright.text(`© Rishon, ${d.getFullYear()}. ` + copyright.attr('data-lang'));
+    }
+    copyrightUpdate('.copyright')
+
+
+mixin select(selectOptions, selectTitle, addClass)
+  .select-gl(class= addClass)
+    ._title
+      span.text_20= selectTitle
+    ._this
+      button(type="button" name="selected")._value.text_18
+        span= selectOptions[0]
+        +icon('arrow_down', 'select-gl__drop')
+      ul._list.text_18
+        li._item.selected= selectOptions[0]
+        -for (var i = 1; i < selectOptions.length; i++)
+          li._item= selectOptions[i]
+
+
+
+
+mixin tabs
+  .tabs
+    ._nav
+      button(type="button" name="tab1")._btn.text_16.tabs--active tab1
+      button(type="button" name="tab2")._btn.text_16 tab2
+      button(type="button" name="tab3")._btn.text_16 tab3
+    ._main
+      ._box.tab1
+        h2 tab1
+      ._box.tab2
+        h2 tab2
+      ._box.tab3
+        h2 tab3
+
+
+mixin accordion
+  .accordion
+    ul._list
+      li._item
+        button(type="button" name="box1")._btn.text_16
+          span box1
+        ._box
+          p._text.text_16
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, reiciendis!
+      li._item
+        button(type="button" name="box2")._btn.text_16
+          span box2
+        ._box
+          p._text.text_16
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, reiciendis!
+      li._item
+        button(type="button" name="box3")._btn.text_16
+          span box3
+        ._box
+          p._text.text_16
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, reiciendis!
+  script.
+    // TODO Accordion
+    $('.accordion__btn').on('click', function (event) {
+      event.preventDefault();
+      if ($(this).hasClass('accordion__active')) {
+        $(this).removeClass('accordion__active');
+        $(this).next().stop(true).slideUp(200);
+      } else {
+        $(this).parents('.accordion__list').find('.accordion__active').removeClass('accordion__active').next().stop(true).slideUp(200);
+        $(this).addClass('accordion__active');
+        $(this).next().stop(true).slideToggle(200);
+      }
+    });
+
+mixin ifDevices-script
+  script.
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {}
+
+mixin mask-script
+  script.
+    // TODO Mask input init
+    $('#input-phone').mask("(999) 999-99-99", {
+      autoclear: true
+    });
+
+mixin swiper-script
+  .swiper-container
+    .swiper-wrapper
+      .swipper-slide
+  script.
+    // TODO Swiper slider init
+    new Swiper('.swiper-container', {
+      speed: 1000,
+      loop: true,
+      centeredSlides: true,
+      centeredSlidesBounds: true,
+      slidesPerView: 1.12,
+      spaceBetween: 10,
+      simulateTouch: true,
+      updateOnWindowResize: true,
+      breakpoints: {
+        768: {
+          slidesPerView: 2
+        },
+        992: {
+          slidesPerView: 2.9
+        },
+        1200: {
+          slidesPerView: 'auto',
+          spaceBetween: 20
+        }
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true
+      },
+      navigation: {
+        nextEl: '.btn_next',
+        prevEl: '.btn_prev',
+      },
+      on: {
+        slideChange: function () {
+          // Some code
+        }
+      }
+    });
+
+mixin multiSwiper-script
+  script.
+    // Multi Swiper init on data-attr
+    $(".swiper-container").each(function () {
+      let $parent = $(this).parents('.swiper-container-parents');
+      let slidesDesktop = $parent.find('.swiper-wrapper').attr('data-slides-desktop');
+      let slidesMobile = $parent.find('.swiper-wrapper').attr('data-slides-mobile');
+      new Swiper(this, {
+        speed: 800,
+        slidesPerView: parseInt(slidesMobile),
+        loopedSlides: parseInt(slidesMobile),
+        spaceBetween: betweenFix(),
+        loop: true,
+        observer: true,
+        observeParents: true,
+        observeSlideChildren: true,
+        navigation: {
+          nextEl: $parent.find('.btn_next')[0],
+          prevEl: $parent.find('.btn_prev')[0]
+        },
+        pagination: {
+          el: $parent.find('.swiper-pagination')[0],
+          type: 'bullets',
+          clickable: true
+        },
+        breakpoints: {
+          576: {
+            slidesPerView: parseInt(slidesDesktop),
+            loopedSlides: parseInt(slidesDesktop),
+          }
+        }
+      });
+    });
+
+mixin stars(star)
+  .stars(data-stars= star)
+
+mixin videojs-youtube
+  video.video-js.vjs-default-skin(
+    poster="static/img/general/poster.png"
+    controls=''
+    width='100%'
+    height='100%'
+    data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=xjS6SftYQaQ"}] }')
+
+mixin videojs
+  video.video-js(controls='', preload='none', poster='static/img/content/video-black1.jpg', data-setup='{}')
+    source(src='http://vjs.zencdn.net/v/oceans.mp4', type='video/mp4')
+    source(src='http://vjs.zencdn.net/v/oceans.webm', type='video/webm')
+    source(src='http://vjs.zencdn.net/v/oceans.ogv', type='video/ogg')
+
+mixin iziModal-video
+  a(href="#"
+    data-video="https://player.vimeo.com/video/82903571"
+    data-title="Lorem Title ipsum"
+    data-izimodal-open="#modal-video").btn_video
+  script.
+    // TODO Modal video init
+    $('.btn_video').on('click', function (event) {
+      event.preventDefault()
+      let way = $(this).attr('data-video');
+      let title = $(this).attr('data-title');
+      $("#modal-video").iziModal({
+        headerColor: '#CC2323',
+        title: title,
+        iframe: true,
+        iframeURL: way,
+        fullscreen: true,
+        closeOnEscape: true,
+        closeButton: true,
+        overlayColor: 'rgba(0, 0, 0, 0.9)',
+        onClosed: function () {
+          $('#modal-video').iziModal('destroy');
+        },
+      });
+    });

@@ -1,0 +1,92 @@
+.welcome
+	width 100%
+	min-height 1081px
+	padding 152px 0 0
+	position relative
+	&--wrap
+		width 100%
+		.slide01
+			.welcome
+				&__info
+					width 100%
+					padding-left: 229px;
+					h1
+						font-weight: 100;
+						font-size: 160px;
+						line-height: 100%;
+						letter-spacing: 0.07em;
+						color baseWhite
+					h1:last-child
+						padding-left: 335px;
+				&__main
+					width 100%
+					max-width 750px
+					padding 175px 0 0 100px
+					p.text_24
+						line-height: 29px;
+						letter-spacing: 0.07em;
+						color baseWhite
+						padding-bottom: 50px;
+				&__image
+					width auto
+					position absolute
+					top 5%
+					left 33%
+					z-index 10
+				&__img
+					size(101%)
+		.slide03, .slide04, .slide05
+			.welcome
+				&__info
+					h1
+						color baseBlack
+				&__main
+					p.text_24
+						color baseBlack
+					.main_btn
+						color baseBlack
+						border: 1px solid baseBlack
+						&::before
+							background-color baseBlack
+		.slide05
+			.welcome
+				&__image
+					width auto
+					position absolute
+					top 6%
+					left 53%
+					z-index 10
+				&__img
+					size(101%)
+	&__info
+		width 100%
+		padding: 120px 0 0 80px;
+		h1
+			font-weight: 100;
+			font-size: 160px;
+			line-height: 100%;
+			letter-spacing: 0.07em;
+			color baseWhite
+	&__main
+		width 100%
+		max-width 750px
+		padding 100px 0 0 100px
+		p.text_24
+			line-height: 29px;
+			letter-spacing: 0.07em;
+			color baseWhite
+			padding-bottom: 50px;
+	&_slide
+		width: 100%;
+		background-repeat no-repeat
+		background-size cover
+		background-position top center
+
+.swiper-button-next
+	top 1000px
+	right 10%
+	color white
+.swiper-button-prev
+	top 1000px
+	left 85%
+	color white

@@ -1,0 +1,57 @@
+.welcome--wrap
+  .swiper-container
+    .swiper-wrapper
+      .swiper-slide
+        .welcome_slide(style='background-color: #88A07D;').slide01
+          .container
+            .welcome
+              ._info
+                h1= welcomeInfo[0]
+                h1= welcomeInfo[2]
+              ._main
+                p.text_24= welcomeInfo[3]
+                +btn_global('button', 'ПОДРОБНЕЕ','main_btn')
+              +img('content/man', 'png','welcome')
+      .swiper-slide
+        .welcome_slide(style='background-image: url("static/img/content/main01.png");').slide02
+          .container
+            .welcome
+              ._info
+                h1= welcomeInfo[0]
+                h1= welcomeInfo[2]
+              ._main
+                p.text_24= welcomeInfo[3]
+                +btn_global('button', 'ПОДРОБНЕЕ','main_btn')
+      .swiper-slide
+        .welcome_slide(style='background-image: url("static/img/content/main02.png");').slide03
+          .container
+            .welcome
+              ._info
+                h1= welcomeInfo[1]
+                h1= welcomeInfo[2]
+              ._main
+                p.text_24= welcomeInfo[3]
+                +btn_global('button', 'ПОДРОБНЕЕ','main_btn')
+      .swiper-slide
+        .welcome_slide(style='background-image: url("static/img/content/main03.png");').slide04
+          .container
+            .welcome
+              ._info
+                h1= welcomeInfo[1]
+                h1= welcomeInfo[2]
+              ._main
+                p.text_24= welcomeInfo[3]
+                +btn_global('button', 'ПОДРОБНЕЕ','main_btn')
+      .swiper-slide
+        .welcome_slide(style='background-color: #E9C13D;').slide05
+          .container
+            .welcome
+              ._info
+                h1= welcomeInfo[1]
+                h1= welcomeInfo[2]
+              ._main
+                p.text_24= welcomeInfo[3]
+                +btn_global('button', 'ПОДРОБНЕЕ','main_btn')
+              +img('content/woman', 'png', 'welcome')
+    .swiper-button-next
+    .swiper-button-prev

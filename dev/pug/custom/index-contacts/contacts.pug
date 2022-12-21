@@ -1,0 +1,112 @@
+.contacts--wrap
+  .container
+    .bread-crumbs
+      a.text_18(href="index.html")
+        | Главная
+      span.text_18
+        | Контакты
+    .contacts
+      ._zag
+        h2.zag
+          | Контакты
+      ._map
+        iframe(src='https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d41507.15965447306!2d26.9885739!3d49.4429845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1613059944298!5m2!1sru!2sua' width='1684' height='500' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0')
+      ._info
+        .row
+          .col-lg-4.col-md-12
+            .production
+              ul._prod
+                li._item
+                  span.text_24
+                    | ПРОИЗВОДСТВО
+                li._item
+                  +icon('location')
+                  p.text_18
+                    | 29000 УКРАИНА, Г. ХМЕЛЬНИЦКИЙ, 1-й Мирный переулок, 20
+                li._item
+                  +icon('phone03')
+                  a.text_18(href="tel:+380683460475")
+                    | +38 068 346 04 75
+                li._item
+                  +icon('phone03')
+                  a.text_18(href="tel:+380664003814")
+                    | +38 066 400 38 14
+                li._item
+                  +icon('calendar')
+                  p.text_18
+                    | понедельник - суббота с 9.00 до 19.00
+                li._item
+                  +icon('mail')
+                  a.text_18(href="email:hector.com.ua@gmail.com")
+                      | hector.com.ua@gmail.com
+          .col-lg-4.col-md-12
+            .production.production2
+              ul._prod
+                li._item
+                  span.text_24
+                    | ИНТЕРНЕТ МАГАЗИН
+                li._item
+                  +icon('phone03')
+                  a.text_18(href="tel:+380683460475")
+                    | +38 068 346 04 75
+                li._item
+                  +icon('phone03')
+                  a.text_18(href="tel:+380664003814")
+                    | +38 066 400 38 14
+          .col-lg-4.col-md-12
+            .production.production3
+              ul._prod
+                li._item
+                  span.text_24
+                    | ОПТОВЫЕ ЗАКУПКИ
+                li._item.item2
+                  +icon('location')
+                  ._block
+                    p.text_18
+                      | Хмельницкий (Осн. производство)
+                    ._block2
+                      a.text_18(href="tel:+380974379808")
+                        | +38 097 437 98 08
+                      p.text_18
+                         | Юрий
+                li._item.item2
+                  +icon('location')
+                  ._block
+                    p.text_18
+                      | Одесса
+                    ._block2
+                      a.text_18(href="tel:+380509106270")
+                        | +38 050 910 62 70
+                      p.text_18
+                        | Максим
+                li._item.item2
+                  +icon('location')
+                  ._block
+                    p.text_18
+                      | Харьков
+                    ._block2
+                      a.text_18(href="tel:+380507219403")
+                        | +38 050 721 94 03
+                      p.text_18
+                        | Денис
+        .info2
+          p.text_24
+            | *Все телефоны доступны в Viber и WhatsApp
+          p.text_36
+            | Есть вопросы?
+          p.text_36
+            | Напишите и мы с вами свяжемся
+      ._form
+        form.form-main
+          .form_item
+            label._label
+              input.text_18(type='text' name='name' placeholder='Ваше имя')._input
+            label._label
+              input.text_18(type='email' name='email' placeholder='Ваш email')._input
+          .form_area
+            p.text_18
+              | Комментарий
+            textarea.text_18(type='text' rows=8)
+            ._btn
+              button(type='submit' name='submit').submit_btn
+                | ОТПРАВИТЬ

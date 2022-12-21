@@ -1,0 +1,49 @@
+.ordering--wrap
+  .container
+    .ordering
+      ._zag
+        h3.zag
+          | ОФОРМЛЕНИЕ ЗАКАЗА
+      ._login
+        ._registr
+          p.text_24
+            | Уже зарегистрированы?
+          button.text_20(type='delete' name='delete').basket_btn
+            | ВОЙТИ В АККАУНТ
+        ._firsttime
+          p.text_24
+            | Впервые у нас?
+          button.text_20(type='delete' name='delete').basketi_btn
+            | ЗАПОЛНИТЬ ДАННЫЕ
+      ._form
+        form.form-main
+          .container
+            .row
+              .col-lg-4.col-md-12
+                .left
+                  //select
+                  //  option Выберите тип доставки
+                  //  option Укрпочта
+                  //  option Укрпочта
+                  //  option(selected) Укрпочта
+                  //  option Укрпочта
+                  //  option Укрпочта
+                  //  option Укрпочта
+                  //  option Новая почта
+                  +select(['Выберите тип доставки','Укрпочта','Новая почта','Justin','Самовывоз'], '', 'select-placeholder')
+                  +select(['Выберите тип оплаты','Оплата на ПриватБанк','Оплата картой'], '', 'select-placeholder')
+                  p.text_18
+                    | Комментарий (не обязательно)
+                  textarea.text_18(type='text' rows=8)
+              .col-lg-4.col-md-12
+                .center
+                  p.text_24
+                    | Данные для регистрации
+                  input.text_18(type='text' name='name' placeholder='Введите имя').input.input-required
+                  input.text_18(type='text' name='last-name' placeholder='Введите фамилию').input
+                  input.text_18(type='tel' name='tel' placeholder='Введите телефон').input.input-required
+                  input.text_18(type='email' name='email' placeholder='Введите email').input
+              .col-lg-4.col-md-12
+                p.text_24
+                  | Адрес оплаты
+                input.text_18(type='text' name='name' placeholder='Введите имя').input

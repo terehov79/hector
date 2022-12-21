@@ -1,0 +1,413 @@
+.container
+  .bread-crumbs
+    a.text_18(href="index.html")
+      | Главная
+    span.text_18
+      | Комплекты
+  .man-complects_btn
+      button(type='button' name='box1').man_btn
+        | ДЛЯ МУЖЧИН
+      button(type='button' name='box2').man_btn
+        | ДЛЯ ЖЕНЩИН
+      button(type='button' name='box3').man_btn
+        | ДЛЯ ДЕТЕЙ
+
+  .man-complects--wrap
+    ._box.box1
+      .container
+        .man-complects_zag
+          h2.zag
+            | КОМПЛЕКТЫ ДЛЯ МУЖЧИН
+        .man-complects_sel
+          +select(['По цене', 'По размеру', 'По цвету'], 'Сортировать', 'sort')
+        .man-complects
+          ._content
+            .row
+              .col-lg-6.col-md-12
+                .content__photo
+                  +img('content/man-compl00', 'png','content__photo')
+                  ._info
+                    span.text_24
+                      | СПОРТИВНЫЙ КОСТЮМ SOMETHING OUT
+                    p.text_14
+                      | ТМ «HECTOR» - украинский производитель качественной мужской одежды, который более 10 лет разрабатывает и выпускает широкий ассортимент моделей с использованием натуральных тканей и фурнитуры. При помощи современного оборудования на изделия наносятся вышивка, принты и другие декоративные элементы.
+                      br
+                      br
+                      |Одним из наиважнейших аспектов нашего производства является контроль качества каждого изделия на всех этапах. Мужскую одежду от Hector можно купить оптом или в розницу.
+              .col-lg-6.col-md-12
+                .content__main
+                  .row
+                    .col-lg-4.col-md-12
+                      .content__block
+                        +img('content/man-compl01', 'png','content__block')
+                        p.text_12
+                          | Штаны мужские Exclusive 22032
+                        span.text_18
+                          | 245₴
+                      .select-color
+                        span.text_20
+                          | Цвет
+                        ._main
+                          ._main--link
+                            a.text_18(href="#")
+                              span.black
+                              | Черный
+                          +icon('arrow_down')
+                        ul.sel
+                          li._item
+                            a.text_18(href="#").sel-active
+                              span.black
+                              | Черный
+                          li._item
+                            a.text_18(href="#")
+                              span.gray
+                              | Серый
+                          li._item
+                            a.text_18(href="#")
+                              span.red
+                              | Красный
+                      +select(['XXL','XL','L'], 'Размер', 'size')
+                    .col-lg-4.col-md-12
+                      .content__block
+                        +img('content/man-compl02', 'png','content__block')
+                        p.text_12
+                          | Штаны мужские Exclusive 22032
+                        span.text_18
+                          | 245₴
+                      .select-color
+                        span.text_20
+                          | Цвет
+                        ._main
+                          ._main--link
+                            a.text_18(href="#")
+                              span.black
+                              | Черный
+                          +icon('arrow_down')
+                        ul.sel
+                          li._item
+                            a.text_18(href="#").sel-active
+                              span.black
+                              | Черный
+                          li._item
+                            a.text_18(href="#")
+                              span.gray
+                              | Серый
+                          li._item
+                            a.text_18(href="#")
+                              span.red
+                              | Красный
+                      +select(['XXL', 'XL', 'L'], 'Размер', 'size')
+                    .col-lg-4.col-md-12
+                      .content__block
+                        +img('content/man-compl03', 'png','content__block')
+                        p.text_12
+                          | Штаны мужские Exclusive 22032
+                        span.text_18
+                          | 245₴
+                      .select-color
+                        span.text_20
+                          | Цвет
+                        ._main
+                          ._main--link
+                            a.text_18(href="#")
+                              span.black
+                              | Черный
+                          +icon('arrow_down')
+                        ul.sel
+                          li._item
+                            a.text_18(href="#").sel-active
+                              span.black
+                              | Черный
+                          li._item
+                            a.text_18(href="#")
+                              span.gray
+                              | Серый
+                          li._item
+                            a.text_18(href="#")
+                              span.red
+                              | Красный
+                      +select(['XXL', 'XL', 'L'], 'Размер', 'size')
+                .content__size-chart
+                  .chart
+                    +icon('angl')
+                    a.text_18(href="#")
+                      | Размерная сетка
+                .content__price
+                  .sell-price
+                    p.text_18
+                      | Цена со скидкой за комплект:
+                    span(data-full-price="1 845₴").text_48.sale-price
+                      | 1 445 ₴
+                  .basket
+                    +icon('basket2')
+                    +btn_global('button', 'ДОБАВИТЬ В КОРЗИНУ','basket_btn')
+          ._fon
+
+    ._box.box2
+      .container
+        .man-complects_zag
+          h2.zag
+            | КОМПЛЕКТЫ ДЛЯ ЖЕНЩИН
+        .man-complects_sel
+          +select(['По цене', 'По размеру', 'По цвету'], 'Сортировать', 'sort')
+        .man-complects
+          ._content
+            .row
+              .col-lg-6.col-md-12
+                .content__photo
+                  +img('content/woman-compl00', 'png','content__photo')
+                  ._info
+                    span.text_24
+                      | СПОРТИВНЫЙ КОСТЮМ SOMETHING OUT
+                    p.text_14
+                      | ТМ «HECTOR» - украинский производитель качественной мужской одежды, который более 10 лет разрабатывает и выпускает широкий ассортимент моделей с использованием натуральных тканей и фурнитуры. При помощи современного оборудования на изделия наносятся вышивка, принты и другие декоративные элементы.
+                      br
+                      br
+                      |Одним из наиважнейших аспектов нашего производства является контроль качества каждого изделия на всех этапах. Мужскую одежду от Hector можно купить оптом или в розницу.
+              .col-lg-6.col-md-12
+                .content__main
+                  .row
+                    .col-lg-4.col-md-12
+                      .content__block
+                        +img('content/woman-compl01', 'png','content__block')
+                        p.text_12
+                          | Штаны женские Exclusive 22032
+                        span.text_18
+                          | 245₴
+                      .select-color
+                        span.text_20
+                          | Цвет
+                        ._main
+                          ._main--link
+                            a.text_18(href="#")
+                              span.black
+                              | Черный
+                          +icon('arrow_down')
+                        ul.sel
+                          li._item
+                            a.text_18(href="#").sel-active
+                              span.black
+                              | Черный
+                          li._item
+                            a.text_18(href="#")
+                              span.gray
+                              | Серый
+                          li._item
+                            a.text_18(href="#")
+                              span.red
+                              | Красный
+                      +select(['XXL','XL','L'], 'Размер', 'size')
+                    .col-lg-4.col-md-12
+                      .content__block
+                        +img('content/woman-compl02', 'png','content__block')
+                        p.text_12
+                          | Штаны мужские Exclusive 22032
+                        span.text_18
+                          | 245₴
+                      .select-color
+                        span.text_20
+                          | Цвет
+                        ._main
+                          ._main--link
+                            a.text_18(href="#")
+                              span.black
+                              | Черный
+                          +icon('arrow_down')
+                        ul.sel
+                          li._item
+                            a.text_18(href="#").sel-active
+                              span.black
+                              | Черный
+                          li._item
+                            a.text_18(href="#")
+                              span.gray
+                              | Серый
+                          li._item
+                            a.text_18(href="#")
+                              span.red
+                              | Красный
+                      +select(['XXL', 'XL', 'L'], 'Размер', 'size')
+                    .col-lg-4.col-md-12
+                      .content__block
+                        +img('content/woman-compl03', 'png','content__block')
+                        p.text_12
+                          | Штаны мужские Exclusive 22032
+                        span.text_18
+                          | 245₴
+                      .select-color
+                        span.text_20
+                          | Цвет
+                        ._main
+                          ._main--link
+                            a.text_18(href="#")
+                              span.black
+                              | Черный
+                          +icon('arrow_down')
+                        ul.sel
+                          li._item
+                            a.text_18(href="#").sel-active
+                              span.black
+                              | Черный
+                          li._item
+                            a.text_18(href="#")
+                              span.gray
+                              | Серый
+                          li._item
+                            a.text_18(href="#")
+                              span.red
+                              | Красный
+                      +select(['XXL', 'XL', 'L'], 'Размер', 'size')
+                .content__size-chart
+                  .chart
+                    +icon('angl')
+                    a.text_18(href="#")
+                      | Размерная сетка
+                .content__price
+                  .sell-price
+                    p.text_18
+                      | Цена со скидкой за комплект:
+                    span(data-full-price="1 845₴").text_48.sale-price
+                      | 1 445 ₴
+                  .basket
+                    +icon('basket2')
+                    +btn_global('button', 'ДОБАВИТЬ В КОРЗИНУ','basket_btn')
+          ._fon
+
+    ._box.box3
+      .container
+        .man-complects_zag
+          h2.zag
+            | КОМПЛЕКТЫ ДЛЯ ДЕТЕЙ
+        .man-complects_sel
+          +select(['По цене', 'По размеру', 'По цвету'], 'Сортировать', 'sort')
+        .man-complects
+          ._content
+            .row
+              .col-lg-6.col-md-12
+                .content__photo
+                  +img('content/man-compl00', 'png','content__photo')
+                  ._info
+                    span.text_24
+                      | СПОРТИВНЫЙ КОСТЮМ SOMETHING OUT
+                    p.text_14
+                      | ТМ «HECTOR» - украинский производитель качественной мужской одежды, который более 10 лет разрабатывает и выпускает широкий ассортимент моделей с использованием натуральных тканей и фурнитуры. При помощи современного оборудования на изделия наносятся вышивка, принты и другие декоративные элементы.
+                      br
+                      br
+                      |Одним из наиважнейших аспектов нашего производства является контроль качества каждого изделия на всех этапах. Мужскую одежду от Hector можно купить оптом или в розницу.
+              .col-lg-6.col-md-12
+                .content__main
+                  .row
+                    .col-lg-4.col-md-12
+                      .content__block
+                        +img('content/man-compl01', 'png','content__block')
+                        p.text_12
+                          | Штаны мужские Exclusive 22032
+                        span.text_18
+                          | 245₴
+                      .select-color
+                        span.text_20
+                          | Цвет
+                        ._main
+                          ._main--link
+                            a.text_18(href="#")
+                              span.black
+                              | Черный
+                          +icon('arrow_down')
+                        ul.sel
+                          li._item
+                            a.text_18(href="#").sel-active
+                              span.black
+                              | Черный
+                          li._item
+                            a.text_18(href="#")
+                              span.gray
+                              | Серый
+                          li._item
+                            a.text_18(href="#")
+                              span.red
+                              | Красный
+                      +select(['XXL','XL','L'], 'Размер', 'size')
+                    .col-lg-4.col-md-12
+                      .content__block
+                        +img('content/man-compl02', 'png','content__block')
+                        p.text_12
+                          | Штаны мужские Exclusive 22032
+                        span.text_18
+                          | 245₴
+                      .select-color
+                        span.text_20
+                          | Цвет
+                        ._main
+                          ._main--link
+                            a.text_18(href="#")
+                              span.black
+                              | Черный
+                          +icon('arrow_down')
+                        ul.sel
+                          li._item
+                            a.text_18(href="#").sel-active
+                              span.black
+                              | Черный
+                          li._item
+                            a.text_18(href="#")
+                              span.gray
+                              | Серый
+                          li._item
+                            a.text_18(href="#")
+                              span.red
+                              | Красный
+                      +select(['XXL', 'XL', 'L'], 'Размер', 'size')
+                    .col-lg-4.col-md-12
+                      .content__block
+                        +img('content/man-compl03', 'png','content__block')
+                        p.text_12
+                          | Штаны мужские Exclusive 22032
+                        span.text_18
+                          | 245₴
+                      .select-color
+                        span.text_20
+                          | Цвет
+                        ._main
+                          ._main--link
+                            a.text_18(href="#")
+                              span.black
+                              | Черный
+                          +icon('arrow_down')
+                        ul.sel
+                          li._item
+                            a.text_18(href="#").sel-active
+                              span.black
+                              | Черный
+                          li._item
+                            a.text_18(href="#")
+                              span.gray
+                              | Серый
+                          li._item
+                            a.text_18(href="#")
+                              span.red
+                              | Красный
+                      +select(['XXL', 'XL', 'L'], 'Размер', 'size')
+                .content__size-chart
+                  .chart
+                    +icon('angl')
+                    a.text_18(href="#")
+                      | Размерная сетка
+                .content__price
+                  .sell-price
+                    p.text_18
+                      | Цена со скидкой за комплект:
+                    span(data-full-price="1 845₴").text_48.sale-price
+                      | 1 445 ₴
+                  .basket
+                    +icon('basket2')
+                    +btn_global('button', 'ДОБАВИТЬ В КОРЗИНУ','basket_btn')
+          ._fon
+
+  .pagination
+    .count
+      +btn_global('button', '1','count_btn')
+      +btn_global('button', '2','count_btn')
+      +btn_global('button', '3','count_btn')
+      +btn_global('button', '4','count_btn')
+      +btn_global('button', '5','count_btn')
+      +btn_global('button', '>','count_btn')

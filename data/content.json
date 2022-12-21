@@ -1,0 +1,26 @@
+{
+  "content": {
+    "titlesWelcome": "Hello welcome",
+    "titlesAbout": "Hello about"
+  },
+  "content-low": {
+    "rebook1" : {
+      "price": "65",
+      "head": "Reebok",
+      "year": "2018",
+      "photos": {
+        "photo1": "foto_home-share.jpg",
+        "photo2": "foto_home-share.jpg"
+      }
+    },
+    "adidas1" : {
+      "price": "99",
+      "head": "Adidas",
+      "year": "2017",
+      "photos": {
+        "photo1": "foto_home-share.jpg",
+        "photo2": "foto_home-share.jpg"
+      }
+    }
+  }
+}

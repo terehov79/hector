@@ -1,0 +1,131 @@
+.basket--wrap
+  .container
+    .bread-crumbs
+      a.text_18(href="index.html")
+        | Главная
+      span.text_18
+        | Корзина
+    .basket
+      ._zag
+        h2.zag
+          | КОРЗИНА
+      ._discont
+        p.text_24
+          | Программа лояльности: при покупке
+        p.text_24.reds
+          | от 2000 ₴
+        p.text_24
+          | скидка
+        p.text_24.reds
+          | 5%
+      ._main
+        ul._card
+          li._head
+            ._photo
+            ._description
+              span.text_18
+                | Описание
+            ._quantity
+              span.text_18
+                | Количество
+            ._price
+              span.text_18
+                | Цена
+            ._sale
+              span.text_18
+                | Скидка
+            ._summ
+              span.text_18
+                | Сумма
+            ._delete
+          li._item
+            ._photo
+              +img('content/basket_01', 'png','basket__photo')
+            ._description
+              p.text_16.bold
+                | ФУТБОЛКА МУЖСКАЯ SOMETHING OUT
+              p.text_16
+                | Артикул: 4567564
+              ._size
+                p.text_16
+                  | Размер:
+                p.text_16.bold
+                  | XXL
+              ._color
+                p.text_16
+                  | Цвет:
+                .khaki
+                p.text_16
+                  | Хаки
+            ._quantity
+              +counter
+            ._price
+              span.text_24
+                | 245₴
+            ._sale
+              span.text_24
+                | 0₴
+            ._summ
+              span.text_24
+                | 245₴
+            ._delete
+              +icon('close')
+              button.text_20(type='delete' name='delete').delete_btn
+                | Удалить
+          li._item
+            ._photo
+              +img('content/basket_01', 'png','basket__photo')
+            ._description
+              p.text_16.bold
+                | ФУТБОЛКА МУЖСКАЯ SOMETHING OUT
+              p.text_16
+                | Артикул: 4567564
+              ._size
+                p.text_16
+                  | Размер:
+                p.text_16.bold
+                  | XXL
+              ._color
+                p.text_16
+                  | Цвет:
+                .khaki
+                p.text_16
+                  | Хаки
+            ._quantity
+              +counter
+            ._price
+              span.text_24
+                | 245₴
+            ._sale
+              span.text_24
+                | 0₴
+            ._summ
+              span.text_24
+                | 245₴
+            ._delete
+              +icon('close')
+              button.text_20(type='delete' name='delete').delete_btn
+                | Удалить
+          li._foot
+            ._promocod
+              p.text_24
+                | Есть промокод на скидку?
+              ._input-promo
+                input.text_18(type='text' name='promocod' placeholder='Введите промокод')._input
+                ._input-icon
+                  +icon('arrow_down')
+            ._topay
+              ._econom
+                p.text_18
+                  | Вы сэкономили:
+                span.text_24
+                  | 45₴
+              ._pay
+                p.text_36
+                  | К оплате:
+                span.text_36
+                  | 440₴
+            ._delete-basket
+              +icon('close')
+              button.text_20(type='delete' name='delete').delete_btn
+                | Очистить корзину

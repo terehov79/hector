@@ -1,0 +1,73 @@
+.news-woman
+  width 100%
+  padding 65px 100px 0
+  &--wrap
+    width 100%
+    .row
+      padding 0 100px
+
+.trends
+  width: 100%;
+  height: 450px;
+  background: #ECECEC;
+  position relative
+  &:hover .trends-content::before
+    background rgba(0,0,0,0.2)
+  &:hover button.read_btn
+    background transparent
+    color baseWhite
+    border 2px solid baseWhite
+  &__image
+    width 100%
+    height 100%
+    display: flex;
+    justify-content: center;
+  &__img
+    width auto
+    height: 100%;
+  &-content
+    width 100%
+    height 100%
+    position absolute
+    top 0
+    left 0
+    display flex
+    flex-direction column
+    justify-content: center;
+    align-items: center;
+    &::before
+      content""
+      width 100%
+      height 100%
+      position absolute
+      top 0
+      left 0
+      background rgba(0,0,0,0.8)
+      z-index: 1
+      transition transition
+    *
+      position relative
+      z-index: 2;
+    p.text_36
+      max-width 600px
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 44px;
+      text-align: center;
+      letter-spacing: 0.07em;
+      color: #fff;
+    p.text_18
+      max-width 500px
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 22px;
+      text-align: center;
+      letter-spacing: 0.07em;
+      color: #fff;
+      padding 20px 0 33px
+
+.news-btn
+  width 100%
+  padding-top: 77px;
+  display flex
+  justify-content: center;
